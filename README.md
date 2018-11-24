@@ -17,8 +17,8 @@ Serão implementadas funcionalidades que permitam ao usuário adicionar, editar 
 ### 3. Restrições
 Por mais que um sistema real permita o agendamento de gastos e rendas recorrentes, isso não será considerado nesse trabalho, pois precisaria de uma base de dados temporal, o que aumentaria muito a complexidade do banco de dados, o que não é o foco principal dessa disciplina.
 
-###4. Protótipos
+### 4. Protótipos
 Essa parte será atualizada a medida que o trabalho for sendo realizado.
 
-###5. Referências
+### 5. Referências
 Essa parte será atualizada a medida que o trabalho for sendo realizado.
