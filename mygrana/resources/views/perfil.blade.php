@@ -4,6 +4,7 @@
 
 @section('Rendas')
 <?php
+
   $renda = 0.0;
 
   foreach ($user->transacoes as $t) {
@@ -11,7 +12,7 @@
       $renda=$renda+$t->valor;
   }
 
-  echo "R\$ " . $renda;
+  echo "R\$ " . number_format($renda,2,',','.');
 
 
 
@@ -27,7 +28,7 @@
       $gasto=$gasto+$t->valor;
   }
 
-  echo "R\$ " . $gasto;
+  echo "R\$ " . number_format($gasto,2,',','.');
  ?>
 @endsection
 
@@ -58,8 +59,8 @@
 @section('LiquidoValor')
 <?php
   if($renda >= $gasto)
-    echo "R\$ " . ($renda-$gasto);
-  else echo "R\$ " . ($gasto-$renda);
+    echo "R\$ " . number_format($renda-$gasto,2,',','.');
+  else echo "R\$ " . number_format($gasto-$renda,2,',','.');
 
 ?>
 @endsection
