@@ -1,74 +1,24 @@
 @extends('mylayout')
+@extends('perfil')
 
 @section('titulo','MyGrana HomePage')
 
-@section('userName')
-{{ $user->name }}
-@endsection
-
-@section('Rendas')
-<?php
-  $renda = 0.0;
-
-  foreach ($user->transacoes as $t) {
-    if ($t->tipo == 0)
-      $renda=$renda+$t->valor;
-  }
-
-  echo "R\$ " . $renda;
+@section('content')
+@foreach($categorias as $c)
+<div class="w3-col m9 w3-right">
 
 
+  <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <h4><strong>{{ $c->nome }}</strong></h4><br>
+    <hr class="w3-clear">
+    <p>Aqui será exibido formulários, informações, gráficos, qlqr coisa do tipo</p>
 
- ?>
-@endsection
+    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+  </div>
 
-@section('Gastos')
-<?php
-  $gasto = 0.0;
+  <!-- End Middle Column -->
+</div>
 
-  foreach ($user->transacoes as $t) {
-    if ($t->tipo == 1)
-      $gasto=$gasto+$t->valor;
-  }
-
-  echo "R\$ " . $gasto;
-
-
-
- ?>
-@endsection
-
-@section('LiquidoIcone')
-<?php
-  if($renda >= $gasto)
-    echo "fa-thumbs-up";
-  else echo "fa-thumbs-down";
- ?>
-@endsection
-
-@section('LiquidoCorIcone')
-<?php
-  if($renda >= $gasto)
-    echo "w3-text-theme";
-  else echo "w3-text-red";
- ?>
-@endsection
-
-@section('LiquidoCorValor')
-<?php
-  if($renda >= $gasto)
-    echo "w3-text-theme";
-  else echo "w3-text-red";
- ?>
-@endsection
-
-@section('LiquidoValor')
-
-<?php
-  if($renda >= $gasto)
-    echo "R\$ " . ($renda-$gasto);
-  else echo "R\$ " . ($gasto-$renda);
-
-?>
-
+@endforeach
 @endsection
