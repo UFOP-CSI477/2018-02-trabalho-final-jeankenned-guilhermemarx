@@ -23,7 +23,8 @@ class TransacoesSeeder extends Seeder
             $tipo = 0;
           else $tipo = 1;
           Transacao::create([
-            'user_id' => '2',
+            'user_id' => '1',
+            'descricao' => $faker->word(),
             'valor' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0.50 , $max = 1000),
             'tipo' => $tipo,
             'categoria_id' => $categoria,
@@ -37,7 +38,8 @@ class TransacoesSeeder extends Seeder
             $tipo = 0;
           else $tipo = 1;
           Transacao::create([
-            'user_id' => '2',
+            'user_id' => '1',
+            'descricao' => $faker->word(),
             'valor' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0.50 , $max = 100),
             'tipo' => $tipo,
             'categoria_id' => $categoria,
@@ -50,7 +52,8 @@ class TransacoesSeeder extends Seeder
             $tipo = 0;
           else $tipo = 1;
           Transacao::create([
-            'user_id' => '2',
+            'user_id' => '1',
+            'descricao' => $faker->word(),
             'valor' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0.50 , $max = 20),
             'tipo' => $tipo,
             'categoria_id' => $categoria,

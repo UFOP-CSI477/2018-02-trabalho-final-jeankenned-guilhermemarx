@@ -1,4 +1,4 @@
-@extends('mylayout')
+@extends('layouts.mylayout')
 @extends('perfil')
 
 @section('titulo','MyGrana HomePage')

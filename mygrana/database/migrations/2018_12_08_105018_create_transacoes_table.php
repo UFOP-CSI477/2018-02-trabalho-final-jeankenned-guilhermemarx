@@ -17,6 +17,7 @@ class CreateTransacoesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->float('valor');
+            $table->string('descricao');
             $table->tinyInteger('tipo');//tipo1 para gasto e tipo0 para renda
             $table->unsignedInteger('categoria_id');
             $table->date('data');
