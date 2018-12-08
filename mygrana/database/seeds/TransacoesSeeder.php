@@ -19,32 +19,32 @@ class TransacoesSeeder extends Seeder
         foreach(range(1,2) as $i){
 
           Transacao::create([
-            'user_id' => '1',
+            'user_id' => '2',
             'valor' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0.50 , $max = 1000),
             'tipo' => $i%2,
             'categoria_id' => $i%8+1,
-            'data' => $faker->dateTimeThisYear( $max = 'now', $timezone = null)
+            'data' => $faker->dateTimeBetween($startDate = '-1 weeks', $endDate = 'now', $timezone = null)
           ]);
         }
 
         foreach(range(1,10) as $i){
 
           Transacao::create([
-            'user_id' => '1',
+            'user_id' => '2',
             'valor' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0.50 , $max = 100),
             'tipo' => $i%2,
             'categoria_id' => $i%8+1,
-            'data' => $faker->dateTimeThisYear( $max = 'now', $timezone = null)
+            'data' => $faker->dateTimeBetween($startDate = '-1 weeks', $endDate = 'now', $timezone = null)
           ]);
         }
         foreach(range(1,100) as $i){
 
           Transacao::create([
-            'user_id' => '1',
+            'user_id' => '2',
             'valor' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0.50 , $max = 20),
             'tipo' => $i%2,
             'categoria_id' => $i%8+1,
-            'data' => $faker->dateTimeThisYear( $max = 'now', $timezone = null)
+            'data' => $faker->dateTimeBetween($startDate = '-1 weeks', $endDate = 'now', $timezone = null)
           ]);
         }
 

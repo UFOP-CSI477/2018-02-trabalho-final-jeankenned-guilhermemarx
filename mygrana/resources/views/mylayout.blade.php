@@ -52,12 +52,12 @@
           <!-- Profile -->
           <div class="w3-card w3-round w3-white">
             <div class="w3-container">
-              <h4 class="w3-center">My Profile</h4>
+              <h4 class="w3-center">@yield('userName')</h4>
               <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Foto"></p>
               <hr>
-              <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Essa parte</p>
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Estará em </p>
-              <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> Todas as páginas</p>
+              <p><i class="fa fa-plus fa-fw w3-margin-right w3-text-theme"></i> <strong class="w3-text-theme">@yield('Rendas')</strong></p>
+              <p><i class="fa fa-minus fa-fw w3-margin-right w3-text-red"></i> <strong class="w3-text-red"> @yield('Gastos') </strong></p>
+              <p><i class="fa @yield('LiquidoIcone') fa-fw w3-margin-right @yield('LiquidoCorIcone')"></i> <strong class="@yield('LiquidoCorValor')"> @yield('LiquidoValor') </strong></p>
             </div>
           </div>
           <br>
