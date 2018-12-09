@@ -114,9 +114,9 @@ $total = 0.00;
       </tbody>
 
 
-      </table
+    </table>
 
-
+        <hr class="w3-clear">
     </div>
 
     <!-- End Middle Column -->

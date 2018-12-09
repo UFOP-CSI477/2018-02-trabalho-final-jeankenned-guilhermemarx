@@ -21,3 +21,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::resource('/transacao','TransacaoController');
 
 Route::get('/transacoesfiltradas','TransacaoController@indexFiltrado')->name('indexfiltrado');
+
+Route::get('/list', 'FotoController@showPictureList')->name('list');
+Route::get('pic/{id}', 'FotoController@showPicture');
+Route::get('add', 'FotoController@addPicture')->name('addPic');
+Route::post('add', 'FotoController@savePicture')->name('add');

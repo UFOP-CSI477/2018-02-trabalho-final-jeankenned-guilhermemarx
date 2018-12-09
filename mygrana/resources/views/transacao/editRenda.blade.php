@@ -21,7 +21,7 @@
                                 <input id="descricao" type="text" class="form-control" name="descricao" value="{{$transacao->descricao}}"required autofocus>
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="valor" class="col-md-4 col-form-label text-md-right">{{ __('Valor') }}</label>
 
@@ -55,7 +55,7 @@
                                 <input id="data" class="form-control" type="date" name="data" value="<?php echo date( $transacao->data );?>" required>
                             </div>
                         </div>
-
+                          <hr class="w3-clear">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-success">

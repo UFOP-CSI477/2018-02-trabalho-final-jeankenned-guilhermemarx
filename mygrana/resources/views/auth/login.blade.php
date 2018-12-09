@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-
+                          <hr class="w3-clear">
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-success">

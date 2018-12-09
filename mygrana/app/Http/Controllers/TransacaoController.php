@@ -37,7 +37,7 @@ class TransacaoController extends Controller
       $meses[] = 'Dezembro';
 
         return view('transacao.index')->with('user',User::find(Auth::user()->id))
-        ->with('transacoes',Transacao::orderBy('data')->get())
+        ->with('transacoes',Transacao::where('user_id','=',Auth::user()->id)->orderBy('data')->get())
         ->with('meses',$meses)
         ->with('filtromes','0')
         ->with('filtrocategoria','0')
@@ -63,13 +63,14 @@ class TransacaoController extends Controller
       $meses[] = 'Novembro';
       $meses[] = 'Dezembro';
       $query = new Transacao;
+      $query = $query->where('user_id','=',Auth::user()->id);
       if($request['categoria']!='0')
         $query = $query->where('categoria_id','=',$request['categoria']);
       if($request['mes'] != '0')
         $query = $query->whereMonth('data', '=', $request['mes']);
       if ($request['ano']!='0')
         $query = $query->whereYear('data', '=', $request['ano']);
-      $transacoes = $query->get();
+      $transacoes = $query->orderBy('data')->get();
 
 
       return view('transacao.index')->with('user',User::find(Auth::user()->id))
@@ -89,10 +90,13 @@ class TransacaoController extends Controller
      */
     public function create(Request $request)
     {
+      $user = User::find(Auth::user()->id);
       if($request->has('gasto')){
-        return view('transacao.createGasto')->with('categorias',Categoria::all())->with('user',User::find(Auth::user()->id));
+        return view('transacao.createGasto')
+        ->with('user',$user)
+        ->with('categorias',Categoria::all());
       }else {
-        return view('transacao.createRenda')->with('categorias',Categoria::all())->with('user',User::find(Auth::user()->id));
+        return view('transacao.createRenda')->with('user',User::find(Auth::user()->id))->with('categorias',Categoria::all());
       }
     }
 

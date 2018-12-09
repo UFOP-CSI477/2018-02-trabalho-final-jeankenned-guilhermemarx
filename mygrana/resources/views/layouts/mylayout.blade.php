@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
   <title>@yield('titulo')</title>
   <meta charset="UTF-8">
@@ -31,7 +31,7 @@
       </div>
       <div class="w3-dropdown-hover w3-hide-small w3-right">
 
-        <button class="w3-button w3-padding-large" title="Notifications"><img src="/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Foto"></button>
+        <button class="w3-button w3-padding-large" title="Notifications"><img src="@yield('imgsrc')" class="w3-circle" style="height:23px;width:23px" alt="Foto"></button>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
           <form id="logout-form" action="{{ route('logout') }}" method="POST">
                 @csrf
@@ -63,7 +63,7 @@
         <div class="w3-card w3-round w3-white">
           <div class="w3-container">
             <h4 class="w3-center">@yield('userName')</h4>
-            <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Foto"></p>
+            <p class="w3-center"><img src="@yield('imgsrc')" class="w3-circle" style="height:106px;width:106px" alt="Foto"></p>
             <hr>
             <p><i class="fa fa-plus fa-fw w3-margin-right w3-text-theme"></i> <strong class="w3-text-theme">@yield('Rendas')</strong></p>
             <p><i class="fa fa-minus fa-fw w3-margin-right w3-text-red"></i> <strong class="w3-text-red"> @yield('Gastos') </strong></p>
@@ -86,8 +86,10 @@
               <button name="listar" class="w3-button w3-block w3-theme-l1 w3-left-align" type="submit" value"Listar Gastos">
                 <i class="fa fa-list-ul fa-fw w3-margin-right"></i>Listar Gastos e Rendas</button>
             </form>
-                  <button class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-list-ul fa-fw w3-margin-right"></i><a href=""> My Events</a></button>
-
+            <form action="{{ route('addPic') }}">
+              <button name="listar" class="w3-button w3-block w3-theme-l1 w3-left-align" type="submit" value"Listar Gastos">
+                <i class="fa fa-image fa-fw w3-margin-right"></i>Mudar Foto de Perfil</button>
+            </form>
             <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
             <div id="Demo4" class="w3-hide w3-container">
               <div class="w3-row-padding">

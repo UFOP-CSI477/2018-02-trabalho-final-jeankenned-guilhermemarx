@@ -1,6 +1,18 @@
 @section('userName')
 {{ $user->name }}
 @endsection
+@section('imgsrc')
+<?php
+
+if($user->fotos->isEmpty()){
+  echo "/standarduser.png";
+
+}
+else{
+  echo "/pic/" . $user->fotos->last()->id;
+}
+?>
+@endsection
 
 @section('Rendas')
 <?php

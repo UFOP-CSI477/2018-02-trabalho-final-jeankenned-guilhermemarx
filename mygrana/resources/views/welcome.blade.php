@@ -47,7 +47,8 @@ foreach ($user->transacoes as $t) {
       </tbody>
 
 
-      </table
+    </table>
+            <hr class="w3-clear">
 
 
     </div>

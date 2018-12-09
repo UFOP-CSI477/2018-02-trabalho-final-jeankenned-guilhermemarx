@@ -56,7 +56,7 @@
                                 <input id="data" class="form-control" type="date" name="data" value="<?php echo date( $transacao->data );?>" required>
                             </div>
                         </div>
-
+                          <hr class="w3-clear">
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-success">
