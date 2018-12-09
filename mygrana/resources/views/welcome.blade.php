@@ -25,7 +25,7 @@ foreach ($user->transacoes as $t) {
   <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
     <h4><strong>Total por categorias</strong></h4><br>
     <hr class="w3-clear">
-    <table class="w3-table-all">
+    <table id="filtroCategoria" class="w3-table-all">
       <thead>
         <tr class="w3-theme-l1">
           <th><strong>Categoria</strong></th>

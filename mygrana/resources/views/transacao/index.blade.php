@@ -12,6 +12,59 @@ $total = 0.00;
 
   <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
     <h4><strong>Lista de Gastos e Rendas</strong></h4><br>
+
+    <form method="get" action="{{ route('indexfiltrado') }}">
+      <div class="form-group row">
+        <label for="mes" class="col-md-4 col-form-label text-md-right">{{ __('Mês') }}</label>
+        <div class="col-md-6">
+            <select id="mes" class="form-control" name="mes" required>
+              <option <?php if($filtromes=='0') echo "selected";?> value="0">Sem Filtro</option>
+            @foreach(range(1,12) as $i)
+                <option <?php if(intval($filtromes)==$i) echo "selected"?> value="{{ $i }}">{{ $meses[$i] }}</option>
+            @endforeach
+
+          </select>
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <label for="ano" class="col-md-4 col-form-label text-md-right">{{ __('Ano') }}</label>
+        <div class="col-md-6">
+            <select id="ano" class="form-control" name="ano" required>
+              <option <?php if($filtroano=='0') echo "selected";?> value="0">Sem Filtro</option>
+            @foreach(range(2015,2018) as $i)
+                <option <?php if(intval($filtroano)==$i) echo "selected"?> value="{{ $i }}">{{ $i }}</option>
+            @endforeach
+
+          </select>
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <label for="categoria" class="col-md-4 col-form-label text-md-right">{{ __('Categoria') }}</label>
+        <div class="col-md-6">
+            <select id="categoria" class="form-control" name="categoria" required>
+              <option <?php if($filtrocategoria=='0') echo "selected";?> value="0">Sem Filtro</option>
+            @foreach($categorias as $c)
+                <option <?php if(intval($filtrocategoria)==$c->id) echo "selected"?> value="{{ $c->id}}">{{ $c->nome }}</option>
+            @endforeach
+
+          </select>
+        </div>
+
+      </div>
+
+      <div class="form-group row mb-0">
+          <div class="col-md-6 offset-md-4">
+              <button type="submit" class="btn btn-success">
+                  {{ __('Filtrar') }}
+              </button>
+          </div>
+      </div>
+    </form>
+
+
+
     <hr class="w3-clear">
     <table class="w3-table-all">
       <thead>

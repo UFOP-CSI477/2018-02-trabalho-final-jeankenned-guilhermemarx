@@ -19,3 +19,5 @@ Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::resource('/transacao','TransacaoController');
+
+Route::get('/transacoesfiltradas','TransacaoController@indexFiltrado')->name('indexfiltrado');

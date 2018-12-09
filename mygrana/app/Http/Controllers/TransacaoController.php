@@ -21,9 +21,66 @@ class TransacaoController extends Controller
      */
     public function index()
     {
+      $meses = array();
+      $meses[] = '';
+      $meses[] = 'Janeiro';
+      $meses[] = 'Fevereiro';
+      $meses[] = 'Março';
+      $meses[] = 'Abril';
+      $meses[] = 'Maio';
+      $meses[] = 'Junho';
+      $meses[] = 'Julho';
+      $meses[] = 'Agosto';
+      $meses[] = 'Setembro';
+      $meses[] = 'Outubro';
+      $meses[] = 'Novembro';
+      $meses[] = 'Dezembro';
+
         return view('transacao.index')->with('user',User::find(Auth::user()->id))
-        ->with('transacoes',Transacao::orderBy('data')->get());
+        ->with('transacoes',Transacao::orderBy('data')->get())
+        ->with('meses',$meses)
+        ->with('filtromes','0')
+        ->with('filtrocategoria','0')
+        ->with('filtroano','0')
+        ->with('categorias',Categoria::all());
     }
+
+    public function indexFiltrado(Request $request){
+      if($request['mes'] == '0' && $request['categoria']=='0' && $request['ano']=='0')
+        return redirect()->route('transacao.index');
+      $meses = array();
+      $meses[] = '';
+      $meses[] = 'Janeiro';
+      $meses[] = 'Fevereiro';
+      $meses[] = 'Março';
+      $meses[] = 'Abril';
+      $meses[] = 'Maio';
+      $meses[] = 'Junho';
+      $meses[] = 'Julho';
+      $meses[] = 'Agosto';
+      $meses[] = 'Setembro';
+      $meses[] = 'Outubro';
+      $meses[] = 'Novembro';
+      $meses[] = 'Dezembro';
+      $query = new Transacao;
+      if($request['categoria']!='0')
+        $query = $query->where('categoria_id','=',$request['categoria']);
+      if($request['mes'] != '0')
+        $query = $query->whereMonth('data', '=', $request['mes']);
+      if ($request['ano']!='0')
+        $query = $query->whereYear('data', '=', $request['ano']);
+      $transacoes = $query->get();
+
+
+      return view('transacao.index')->with('user',User::find(Auth::user()->id))
+      ->with('transacoes',$transacoes)
+      ->with('meses',$meses)
+      ->with('filtromes',$request['mes'])
+      ->with('filtrocategoria',$request['categoria'])
+      ->with('filtroano',$request['ano'])
+      ->with('categorias',Categoria::all());
+    }
+
 
     /**
      * Show the form for creating a new resource.
