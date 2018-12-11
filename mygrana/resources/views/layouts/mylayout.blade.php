@@ -18,19 +18,9 @@
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
       <a href="/" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>MyGrana</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
-        <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-          <a href="#" class="w3-bar-item w3-button">Logout</a>
-        </div>
-      </div>
-      <div class="w3-dropdown-hover w3-hide-small w3-right">
 
+      <div class="w3-dropdown-hover w3-right">
         <button class="w3-button w3-padding-large" title="Notifications"><img src="@yield('imgsrc')" class="w3-circle" style="height:23px;width:23px" alt="Foto"></button>
         <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
           <form id="logout-form" action="{{ route('logout') }}" method="POST">
@@ -39,19 +29,9 @@
             </form>
         </div>
       </div>
-      <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-        <img src="/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Foto">
-      </a>-->
     </div>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
-  </div>
 
   <!-- Page Container -->
   <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
@@ -90,30 +70,7 @@
               <button name="listar" class="w3-button w3-block w3-theme-l1 w3-left-align" type="submit" value"Listar Gastos">
                 <i class="fa fa-image fa-fw w3-margin-right"></i>Mudar Foto de Perfil</button>
             </form>
-            <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
-            <div id="Demo4" class="w3-hide w3-container">
-              <div class="w3-row-padding">
-                <br>
-                <div class="w3-half">
-                  <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
-                </div>
-                <div class="w3-half">
-                  <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-                </div>
-                <div class="w3-half">
-                  <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
-                </div>
-                <div class="w3-half">
-                  <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
-                </div>
-                <div class="w3-half">
-                  <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-                </div>
-                <div class="w3-half">
-                  <img src="/w3images/snow.jpg" style="width:100%" class="w3-margin-bottom">
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         <br>
@@ -133,14 +90,6 @@
   </div>
   <br>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-theme-d3 w3-padding-16">
-    <h5>Footer</h5>
-  </footer>
-
-  <footer class="w3-container w3-theme-d5">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
 
   <script>
   // Accordion
@@ -157,20 +106,8 @@
     x = document.getElementById(id2);
     if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
-      //x.previousElementSibling.className += " w3-theme-d1";
     } else {
       x.className = x.className.replace("w3-show", "");
-      //x.previousElementSibling.className = x.previousElementSibling.className.replace(" w3-theme-d1", "");
-    }
-  }
-
-  // Used to toggle the menu on smaller screens when clicking on the menu button
-  function openNav() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
     }
   }
 
