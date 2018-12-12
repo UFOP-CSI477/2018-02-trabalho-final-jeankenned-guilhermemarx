@@ -18,7 +18,16 @@ Serão implementadas funcionalidades que permitam ao usuário adicionar, editar 
 Por mais que um sistema real permita o agendamento de gastos e rendas recorrentes, isso não será considerado nesse trabalho, pois precisaria de uma base de dados temporal, o que aumentaria muito a complexidade do banco de dados, o que não é o foco principal dessa disciplina.
 
 ### 4. Protótipos
-Essa parte será atualizada a medida que o trabalho for sendo realizado.
+Funcionalidades:
+Cadastro: Nessa página é possível adicionar um novo usuário que poderá fazer login no sistema com os dados cadastrados.
+Login: Permite que o usuário faça login para utilizar as funcionalidades do sistema.
+Página inicial/subpáginas: Apresenta o nome e foto do usuário cadastrado, além de informações a respeito de valores de despesa, lucros e valor líquido. Possui um menu contendo opções para trocar foto, inserir uma nova transação e exibir um extrato de transações. Além disso, é possível editar ou excluir uma transação. 
+O usuário pode também filtrar as transações por data e categoria. 
+Além disso, é possível que o usuário deslogue do sistema.
+
 
 ### 5. Referências
-Essa parte será atualizada a medida que o trabalho for sendo realizado.
+W3SCHOOLS. Disponível em: <https://www.w3schools.com/> Acesso em: 12 de Dezembro de 2018
+BOOTSTRAP. Disponível em: <https://getbootstrap.com/> Acesso em: 12 de Dezembro de 2018
+LARAVEL. Disponível em: <https://laravel.com/> Acesso em: 12 de Dezembro de 2018
+
