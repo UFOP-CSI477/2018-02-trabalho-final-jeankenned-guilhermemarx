@@ -28,6 +28,8 @@ Além disso, é possível que o usuário deslogue do sistema.
 
 ### 5. Referências
 W3SCHOOLS. Disponível em: <https://www.w3schools.com/> Acesso em: 12 de Dezembro de 2018
+
 BOOTSTRAP. Disponível em: <https://getbootstrap.com/> Acesso em: 12 de Dezembro de 2018
+
 LARAVEL. Disponível em: <https://laravel.com/> Acesso em: 12 de Dezembro de 2018
 
