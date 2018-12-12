@@ -6,10 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+  <!-- W3Schools
+  Copyright Information
+All pages and graphics on this web site are the property of the company Refsnes Data.
+
+Pages, code or other content from W3Schools may not be redistributed or reproduced in any way, shape, or form without the written permission of Refsnes Data.
+
+Failure to do so is a violation of copyright laws.
+
+Using W3Schools in Teaching
+Fair use includes using copyrighted material in teaching under this balancing:
+
+Favorable Use:
+Copying examples and code snippets for non-profit teaching and research.
+Copying small quantities, appropriate for classroom teaching.
+Not Favorable Use:
+Copying for profitable or commercial use.
+Massive or verbatim copying.
+Copying large quantities.
+ -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- In the Font Awesome Free download, the SIL OLF license applies to all icons packaged as web and desktop font files. -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Bootstrap is released under the MIT license and is copyright 2018 Twitter. Boiled down to smaller chunks, it can be described with the following conditions.
 
+It requires you to:
+Keep the license and copyright notice included in Bootstrap’s CSS and JavaScript files when you use them in your works
+It permits you to:
+Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes
+Use Bootstrap in packages or distributions that you create
+Modify the source code
+Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license
+It forbids you to:
+Hold the authors and license owners liable for damages as Bootstrap is provided without warranty
+Hold the creators or copyright holders of Bootstrap liable
+Redistribute any piece of Bootstrap without proper attribution
+Use any marks owned by Twitter in any way that might state or imply that Twitter endorses your distribution
+Use any marks owned by Twitter in any way that might state or imply that you created the Twitter software in question
+It does not require you to:
+Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
+Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)-->
   <style>
   html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
   </style>
